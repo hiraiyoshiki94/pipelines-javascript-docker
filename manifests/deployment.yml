@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hiraiyoshikipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hiraiyoshikipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: hiraiyoshikipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: hiraiyoshikipipelinesjavascriptdocker 
+          image: mycontainerregistry20250104.azurecr.io/hiraiyoshikipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
